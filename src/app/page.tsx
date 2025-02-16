@@ -1,6 +1,9 @@
+import Navbar from "@/components/sections/navbar";
 
 export default function Home() {
   return (
-    <div className="text-4xl">GAPSTAYS</div>
+    <div className="">
+      <Navbar />
+    </div>
   );
 }
