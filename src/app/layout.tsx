@@ -2,10 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from 'next/font/google'
 import "./globals.css";
 
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-})
+const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "GAPSTAYS",
@@ -15,8 +12,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} font-sans antialiased bg-black`}>
+      <body className={`${inter.className} relative min-h-screen overflow-x-hidden bg-black`}>
         {children}
+        <div className="fixed inset-0 bg-orange-900/50 mt-60 h-[20rem] w-[100rem] max-w-[100vw] blur-[25rem] rounded-full" />
       </body>
     </html>
   );

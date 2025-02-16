@@ -1,9 +1,9 @@
-import Navbar from "@/components/sections/navbar";
+import { Navbar } from "@/components/sections/navbar";
 
 export default function Home() {
   return (
-    <div className="">
+    <main className="min-h-screen w-full">
       <Navbar />
-    </div>
+    </main>
   );
 }
