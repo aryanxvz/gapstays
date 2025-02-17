@@ -100,7 +100,7 @@ export const Navbar: FC = () => {
   }, [activeSection]);
 
   const NavItems = ({ className, onClick }: { className?: string; onClick?: (id: string) => void }) => (
-    <div className={cn('flex flex-col md:flex-row md:items-center gap-6 md:gap-12 2xl:gap-16', className)}>
+    <div className={cn('flex flex-col lg:flex-row md:items-center gap-6 md:gap-12 2xl:gap-16', className)}>
       {navLinks.map(({ id, label }) => (
         <button key={id} onClick={() => onClick?.(id)}
           className={cn(
@@ -122,14 +122,14 @@ export const Navbar: FC = () => {
         </button>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:block">
+        <div className="hidden lg:block">
           <NavItems onClick={scrollToSection} />
         </div>
 
         {/* Mobile Navigation */}
         <Sheet open={open} onOpenChange={setOpen}>
           <SheetTrigger asChild>
-            <Button variant="ghost" size="icon" className="md:hidden">
+            <Button variant="ghost" size="icon" className="lg:hidden">
               <Menu className="h-6 w-6 text-white" />
             </Button>
           </SheetTrigger>

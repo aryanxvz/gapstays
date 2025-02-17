@@ -4,7 +4,7 @@ import { Mail, MapPin, Phone } from 'lucide-react';
 export const Footer = () => {
   return (
     <footer className="bg-neutral-900 text-gray-400 py-12">
-      <div className="container max-w-6xl 2xl:max-w-7xl mx-auto px-6">
+      <div className="container max-w-6xl 2xl:max-w-7xl mx-auto px-8 lg:px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
           <div className="flex flex-col items-center md:items-start">
             <h3 className="text-white text-lg font-semibold mb-4">About Gapstays</h3>
@@ -15,7 +15,7 @@ export const Footer = () => {
             </p>
           </div>
 
-          <div className="flex flex-col items-center md:items-start">
+          <div className="flex flex-col items-center md:items-start md:pl-8">
             <h3 className="text-white text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
@@ -49,7 +49,7 @@ export const Footer = () => {
               <div className="flex md:flex-row items-center space-y-2 md:space-y-0 md:space-x-3">
                 <Phone className="w-5 h-5 mt-2 mr-2 md:mt-0 md:mr-0 flex-shrink-0" />
                 <a href="tel:+918605551424" className="hover:text-orange-500 transition-colors">
-                  +91 8605551424
+                  +91 86055 51424
                 </a>
               </div>
               <div className="flex md:flex-row items-center space-y-2 md:space-y-0 md:space-x-3">

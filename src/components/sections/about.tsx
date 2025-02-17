@@ -1,5 +1,5 @@
 import { JSX } from "react"
-import { FaHandsWash, FaClock, FaWifi, FaTshirt, FaConciergeBell, FaSnowflake, FaUtensils, FaParking, FaCouch } from "react-icons/fa"
+import { FaClock, FaWifi, FaConciergeBell, FaBroom, FaSoap, FaWind, FaMugHot, FaBed, FaTint } from "react-icons/fa"
 
 interface StatCard {
   value: string;
@@ -20,15 +20,15 @@ const stats: StatCard[] = [
 ];
 
 const features: FeatureCard[] = [
-  { title: "Hygiene Plus", description: "Clean and sanitized rooms for a safe, worry-free stay.", icon: <FaHandsWash className="text-orange-500 text-2xl" /> },
-  { title: "24-hour Check-in", description: "Arrive at your convenience with flexible check-in anytime.", icon: <FaClock className="text-orange-500 text-2xl" /> },
-  { title: "Complimentary Wi-Fi", description: "Stay connected with high-speed internet access.", icon: <FaWifi className="text-orange-500 text-2xl" /> },
-  { title: "Laundry Service", description: "Convenient laundry service available at an additional charge.", icon: <FaTshirt className="text-orange-500 text-2xl" /> },
+  { title: "Hygiene Plus", description: "Clean and sanitized rooms for a safe, worry-free stay.", icon: <FaBroom className="text-orange-500 text-2xl" /> },
+  { title: "24/7 Check-in", description: "Flexible check-in anytime for your convenience.", icon: <FaClock className="text-orange-500 text-2xl" /> },
+  { title: "Fast Wi-Fi", description: "Enjoy seamless high-speed internet access.", icon: <FaWifi className="text-orange-500 text-2xl" /> },
+  { title: "Laundry Service", description: "Fresh, clean clothes with our hassle-free laundry service.", icon: <FaSoap className="text-orange-500 text-2xl" /> },
   { title: "24/7 Room Service", description: "Get essentials delivered anytime.", icon: <FaConciergeBell className="text-orange-500 text-2xl" /> },
-  { title: "Air - Conditioning", description: "Stay cool and relaxed with climate-controlled rooms.", icon: <FaSnowflake className="text-orange-500 text-2xl" /> },
-  { title: "Breakfast", description: "Start your day with a fresh, wholesome meal.", icon: <FaUtensils className="text-orange-500 text-2xl" /> },
-  { title: "Cozy Lounge Area", description: "Relax in a comfortable, well-lit common space.", icon: <FaCouch className="text-orange-500 text-2xl" /> },
-  { title: "Secure On-Site Parking", description: "Safe and accessible parking with surveillance cameras.", icon: <FaParking className="text-orange-500 text-2xl" /> },
+  { title: "Air Conditioning", description: "Stay cool with fully air-conditioned rooms.", icon: <FaWind className="text-orange-500 text-2xl" /> },
+  { title: "Breakfast", description: "Start your day with a fresh and delicious meal.", icon: <FaMugHot className="text-orange-500 text-2xl" /> },
+  { title: "Comfortable Queen Bed", description: "Relax and unwind on a plush queen-size bed.", icon: <FaBed className="text-orange-500 text-2xl" /> },
+  { title: "Free Water Bottles", description: "Stay hydrated with complimentary bottled water.", icon: <FaTint className="text-orange-500 text-2xl" /> },
 ];
 
 const StatBox = ({ value, label }: StatCard) => (

@@ -28,20 +28,20 @@ export const Location = () => {
 
               <div className="mt-4 flex items-center gap-2 text-gray-400">
                 <Phone className="flex-shrink-0 text-orange-500 mr-1" /> 
-                <a href="tel:+918605551424" className="hover:text-orange-300">
+                <a href="tel:+918605551424" className="hover:text-orange-400">
                   +91 860 555 1424
                 </a>
               </div>
 
               <div className="mt-2 flex items-center gap-2 text-gray-400">
                 <Mail className="flex-shrink-0 text-orange-500 mr-1" /> 
-                <a href="mailto:gapstayspune@gmail.com" className="hover:text-orange-300">
+                <a href="mailto:gapstayspune@gmail.com" className="hover:text-orange-400">
                   gapstayspune@gmail.com
                 </a>
               </div>
 
               <h4 className="mt-8 text-lg font-semibold text-center md:text-start">Nearby Attractions:</h4>
-              <ul className="mt-2 text-gray-300 flex flex-col items-center md:items-start px-6 lg:px-0">
+              <ul className="mt-2 text-gray-300 flex flex-col items-center md:items-start px-6 md:px-0">
                 <li className="flex items-center text-gray-400 gap-3 mt-1 text-center md:text-start">
                   <Check className="text-orange-500 hidden md:block" /> 
                   Aga Khan Palace is just 7 minutes away (2.7 km)
@@ -65,7 +65,7 @@ export const Location = () => {
           <div className="h-[400px] rounded-lg overflow-hidden shadow-lg">
             <iframe
               className="w-full h-full"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.2655905406377!2d73.92310515530022!3d18.56079009287348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c11404e5581d%3A0x5b7979cecb32726c!2sWhite%20Castle%20Heritage!5e0!3m2!1sen!2sin!4v1739788974767!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.2655905406377!2d73.92310515530019!3d18.56079009287348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c1c0dadacecd%3A0x5b5db1739841a6a2!2sGapstays!5e0!3m2!1sen!2sin!4v1739802508897!5m2!1sen!2sin"
               style={{ border: 0 }}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
