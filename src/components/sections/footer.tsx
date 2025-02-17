@@ -5,9 +5,8 @@ export const Footer = () => {
   return (
     <footer className="bg-neutral-900 text-gray-400 py-12">
       <div className="container max-w-6xl 2xl:max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-
-          <div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
+          <div className="flex flex-col items-center md:items-start">
             <h3 className="text-white text-lg font-semibold mb-4">About Gapstays</h3>
             <p>
               Welcome to Gapstays, your premier destination for comfortable and affordable stays in Pune. 
@@ -16,7 +15,7 @@ export const Footer = () => {
             </p>
           </div>
 
-          <div>
+          <div className="flex flex-col items-center md:items-start">
             <h3 className="text-white text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
@@ -37,24 +36,24 @@ export const Footer = () => {
             </ul>
           </div>
 
-          <div>
+          <div className="flex flex-col items-center md:items-start">
             <h3 className="text-white text-lg font-semibold mb-4">Contact Us</h3>
-            <div className="space-y-4">
-              <div className="flex items-start space-x-3">
+            <div className="space-y-4 flex flex-col items-center md:items-start">
+              <div className="flex md:flex-row items-center md:items-start space-y-2 md:space-y-0 md:space-x-3">
                 <MapPin className="w-5 h-5 mt-1 flex-shrink-0" />
-                <p>
+                <p className="text-center md:text-left">
                   Gapstays, Fifth Mail, Bus Stop, SN.45/a/5/2, Nagar Rd, opp. BRT, near E-Space IT Park, 
                   Somnath Nagar, Wadgaon Sheri, Pune, Maharashtra 411014
                 </p>
               </div>
-              <div className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 flex-shrink-0" />
+              <div className="flex md:flex-row items-center space-y-2 md:space-y-0 md:space-x-3">
+                <Phone className="w-5 h-5 mt-2 mr-2 md:mt-0 md:mr-0 flex-shrink-0" />
                 <a href="tel:+918605551424" className="hover:text-orange-500 transition-colors">
                   +91 8605551424
                 </a>
               </div>
-              <div className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 flex-shrink-0" />
+              <div className="flex md:flex-row items-center space-y-2 md:space-y-0 md:space-x-3">
+                <Mail className="w-5 h-5 mt-2 mr-2 md:mt-0 md:mr-0 flex-shrink-0" />
                 <a href="mailto:gapstayspune@gmail.com" className="hover:text-orange-500 transition-colors">
                   gapstayspune@gmail.com
                 </a>
