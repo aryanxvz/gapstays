@@ -51,7 +51,7 @@ const FeatureBox = ({ title, description, icon }: FeatureCard) => (
 export const About = () => {
   return (
     <section id="about" className="min-h-screen bg-gray-50 pt-16 sm:pt-20 md:pt-24">
-      <div className="max-w-6xl mx-auto flex flex-col items-center px-4 sm:px-6">
+      <div className="max-w-6xl mx-auto flex flex-col items-center px-6">
         <div className="mb-8 sm:mb-12">
           <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-black pb-4 text-center">About GAPSTAYS</div>
           <div className="w-16 sm:w-20 h-1 bg-orange-500 mx-auto"></div>

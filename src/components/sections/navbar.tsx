@@ -115,7 +115,7 @@ export const Navbar: FC = () => {
   );
 
   return (
-    <nav className="fixed top-0 w-full bg-black/90 backdrop-blur-sm px-4 py-4 md:px-8 lg:px-20 2xl:px-28 2xl:py-6 z-50 border-b border-white/10">
+    <nav className="fixed top-0 w-full bg-neutral-900 backdrop-blur-sm px-4 py-4 md:px-8 lg:px-20 2xl:px-28 2xl:py-6 z-50">
       <div className="mx-auto max-w-[1920px] flex items-center justify-between">
         <button onClick={scrollToTop} className="text-2xl 2xl:text-4xl font-bold text-orange-500 hover:text-orange-400 transition-colors my-1 mx-3 xl:p-0">
           GAPSTAYS
@@ -133,7 +133,7 @@ export const Navbar: FC = () => {
               <Menu className="h-6 w-6 text-white" />
             </Button>
           </SheetTrigger>
-          <SheetContent side="right" className="bg-black/95 backdrop-blur-sm border-white/10">
+          <SheetContent side="right" className="bg-neutral-900/95 backdrop-blur-sm border-white/10">
             <SheetHeader className="text-left">
               <SheetTitle className="text-white ml-2">Navigation</SheetTitle>
             </SheetHeader>
