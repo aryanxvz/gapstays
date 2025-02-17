@@ -4,7 +4,7 @@ import React from "react";
 export const Location = () => {
   return (
     <section id="location" className="bg-neutral-900 w-full text-white py-16 px-4">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+      <div className="max-w-6xl 2xl:max-w-7xl mx-auto px-4 sm:px-6">
 
         <div className="mb-12">
           <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white pb-4 text-center">Our Location</div>
@@ -12,7 +12,7 @@ export const Location = () => {
           <div className="w-16 sm:w-20 h-1 bg-orange-500 mx-auto"></div>
         </div>
 
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-start">
+        <div className="max-w-6xl 2xl:max-w-7xl mx-auto grid md:grid-cols-2 gap-8 items-start">
           <div className="flex flex-col items-center md:items-start">
             <h3 className="text-3xl font-semibold mb-4 text-center md:text-start">GAPSTAYS</h3>
             
@@ -41,18 +41,22 @@ export const Location = () => {
               </div>
 
               <h4 className="mt-8 text-lg font-semibold text-center md:text-start">Nearby Attractions:</h4>
-              <ul className="mt-2 text-gray-300 flex flex-col items-center md:items-start">
+              <ul className="mt-2 text-gray-300 flex flex-col items-center md:items-start px-6 lg:px-0">
                 <li className="flex items-center text-gray-400 gap-3 mt-1 text-center md:text-start">
-                  <Check className="text-orange-500" /> Aga Khan Palace is just 7 minutes away (2.7 km)
+                  <Check className="text-orange-500 hidden md:block" /> 
+                  Aga Khan Palace is just 7 minutes away (2.7 km)
                 </li>
                 <li className="flex items-center text-gray-400 gap-3 mt-1 text-center md:text-start">
-                  <Check className="text-orange-500" /> Pune International Airport is only 6 minutes away (3 km)
+                  <Check className="text-orange-500 hidden md:block" /> 
+                  Pune International Airport is only 6 minutes away (3 km)
                 </li>
                 <li className="flex items-center text-gray-400 gap-3 mt-1 text-center md:text-start">
-                  <Check className="text-orange-500" /> Pune Junction Train Station is 15 minutes away (7.4 km)
+                  <Check className="text-orange-500 hidden md:block" /> 
+                  Pune Junction Train Station is 15 minutes away (7.4 km)
                 </li>
                 <li className="flex items-center text-gray-400 gap-3 mt-1 text-center md:text-start">
-                  <Check className="text-orange-500" /> Phoenix Marketcity is just 2 minutes away (650 meters)
+                  <Check className="text-orange-500 hidden md:block" /> 
+                  Phoenix Marketcity is just 2 minutes away (650 meters)
                 </li>
               </ul>
             </div>

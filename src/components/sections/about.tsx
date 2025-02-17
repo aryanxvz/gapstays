@@ -50,8 +50,8 @@ const FeatureBox = ({ title, description, icon }: FeatureCard) => (
 
 export const About = () => {
   return (
-    <section id="about" className="min-h-screen bg-gray-50 pt-16 sm:pt-20 md:pt-24">
-      <div className="max-w-6xl mx-auto flex flex-col items-center px-6">
+    <section id="about" className="min-h-screen bg-gray-50 pt-16 sm:pt-20 md:pt-24 pb-20">
+      <div className="max-w-6xl 2xl:max-w-7xl mx-auto flex flex-col items-center px-6">
         <div className="mb-8 sm:mb-12">
           <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-black pb-4 text-center">About GAPSTAYS</div>
           <div className="w-16 sm:w-20 h-1 bg-orange-500 mx-auto"></div>
@@ -78,7 +78,7 @@ export const About = () => {
           <div className="w-16 sm:w-20 h-1 bg-orange-500 mx-auto"></div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-3 sm:gap-4 rounded-lg shadow-lg mt-8 sm:mt-12 w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 rounded-lg shadow-lg mt-8 sm:mt-12 w-full">
           {features.map((feature, index) => (
             <FeatureBox key={index} {...feature} />
           ))}
