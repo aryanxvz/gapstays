@@ -13,7 +13,6 @@ const navLinks = [
   { id: 'reviews', label: 'Reviews' },
   { id: 'gallery', label: 'Gallery' },
   { id: 'location', label: 'Location' },
-  { id: 'contact', label: 'Contact' },
 ] as const;
 
 export const Navbar: FC = () => {
@@ -28,27 +27,77 @@ export const Navbar: FC = () => {
     }
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   useEffect(() => {
     const handleScroll = () => {
+      // Get all sections
       const sections = navLinks.map(({ id }) => {
         const element = document.getElementById(id);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          return { id, top: rect.top };
+        if (!element) return null;
+        const rect = element.getBoundingClientRect();
+        return {
+          id,
+          top: rect.top,
+          bottom: rect.bottom,
+          height: rect.height
+        };
+      }).filter(Boolean);
+
+      // Get viewport height
+      const viewportHeight = window.innerHeight;
+      
+      // Find the section that takes up the most space in the viewport
+      let maxVisibleSection = { id: 'home', visibleHeight: 0 };
+      
+      sections.forEach((section) => {
+        if (!section) return;
+        
+        // Calculate how much of the section is visible in the viewport
+        const visibleTop = Math.max(0, section.top);
+        const visibleBottom = Math.min(viewportHeight, section.bottom);
+        const visibleHeight = Math.max(0, visibleBottom - visibleTop);
+        
+        // Add a bias for sections near the top of the viewport
+        const topBias = section.top < viewportHeight * 0.5 ? 1.2 : 1;
+        const adjustedVisibleHeight = visibleHeight * topBias;
+        
+        if (adjustedVisibleHeight > maxVisibleSection.visibleHeight) {
+          maxVisibleSection = {
+            id: section.id,
+            visibleHeight: adjustedVisibleHeight
+          };
         }
-        return { id, top: 0 };
       });
 
-      const current = sections.reduce((acc, section) => {
-        return Math.abs(section.top) < Math.abs(acc.top) ? section : acc;
-      });
-
-      setActiveSection(current.id);
+      if (maxVisibleSection.id !== activeSection) {
+        setActiveSection(maxVisibleSection.id);
+      }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    // Throttle the scroll event to improve performance
+    let ticking = false;
+    const scrollListener = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          handleScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    window.addEventListener('scroll', scrollListener);
+    // Initial check
+    handleScroll();
+    
+    return () => window.removeEventListener('scroll', scrollListener);
+  }, [activeSection]);
 
   const NavItems = ({ className, onClick }: { className?: string; onClick?: (id: string) => void }) => (
     <div className={cn('flex flex-col md:flex-row md:items-center gap-6 md:gap-12 2xl:gap-16', className)}>
@@ -68,8 +117,7 @@ export const Navbar: FC = () => {
   return (
     <nav className="fixed top-0 w-full bg-black/90 backdrop-blur-sm px-4 py-4 md:px-8 lg:px-20 2xl:px-28 2xl:py-6 z-50 border-b border-white/10">
       <div className="mx-auto max-w-[1920px] flex items-center justify-between">
-
-        <button onClick={() => scrollToSection('home')} className="text-2xl 2xl:text-4xl font-bold text-orange-500 hover:text-orange-400 transition-colors my-1 mx-3 xl:p-0">
+        <button onClick={scrollToTop} className="text-2xl 2xl:text-4xl font-bold text-orange-500 hover:text-orange-400 transition-colors my-1 mx-3 xl:p-0">
           GAPSTAYS
         </button>
 
