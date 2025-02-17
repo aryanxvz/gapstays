@@ -78,7 +78,7 @@ export const About = () => {
           <div className="w-16 sm:w-20 h-1 bg-orange-500 mx-auto"></div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 rounded-lg shadow-lg mt-8 sm:mt-12 w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 rounded-lg mt-8 sm:mt-12 w-full">
           {features.map((feature, index) => (
             <FeatureBox key={index} {...feature} />
           ))}

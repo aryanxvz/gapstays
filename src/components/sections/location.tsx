@@ -3,7 +3,7 @@ import React from "react";
 
 export const Location = () => {
   return (
-    <section id="location" className="bg-neutral-900 w-full text-white py-16 px-4">
+    <section id="location" className="bg-neutral-900 w-full text-white pt-16 pb-24 px-4">
       <div className="max-w-6xl 2xl:max-w-7xl mx-auto px-4 sm:px-6">
 
         <div className="mb-12">
