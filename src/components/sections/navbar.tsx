@@ -55,7 +55,7 @@ export const Navbar: FC = () => {
       {navLinks.map(({ id, label }) => (
         <button key={id} onClick={() => onClick?.(id)}
           className={cn(
-            'text-sm 2xl:text-base font-medium hover:text-orange-500 transition-all',
+            'text-sm 2xl:text-base font-normal hover:text-orange-500 transition-all',
             activeSection === id ? 'text-orange-500' : 'text-white',
             'justify-start md:justify-center'
           )}>
