@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} relative min-h-screen overflow-x-hidden bg-black`}>
+      <body className={`${inter.className} relative min-h-screen overflow-x-hidden bg-neutral-900`}>
         <div className="fixed inset-0 bg-orange-900/50 mt-60 h-[20rem] w-[100rem] max-w-[100vw] blur-[25rem] rounded-full -z-10" />
         {children}
       </body>
