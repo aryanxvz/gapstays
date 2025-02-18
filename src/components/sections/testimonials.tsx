@@ -3,66 +3,65 @@ import { TestimonialsHeader } from "../testimonial-header";
 
 const testimonialsData = [
   {
-    imageUrl: "https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80",
-    name: "Paul Starr",
+    imageUrl: "/nikhil.png",
+    name: "Nikhil",
     rating: 5,
-    testimonial: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa sit rerum incidunt, a consequuntur recusandae ab saepe illo est quia obcaecati neque quibusdam eius accusamus error officiis atque voluptates magnam!"
+    testimonial: "Overall service was good. Rooms were clean, staff was chill and friendly. Its good for Couple, keeping in mind - Lodge location is bit into public area. But it was fine. They asked Rs. 1800/- for one day."
   },
   {
-    imageUrl: "https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80",
-    name: "Paul Starr",
+    imageUrl: "Jitendra Singh.png",
+    name: "Jitendra Singh",
     rating: 5,
-    testimonial: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad mollitia rerum quo unde neque atque molestias quas pariatur! Sint, maxime?"
+    testimonial: "The hotel is very awesome to stay in good budget. Breakfast is also nice. Rooms are very big and clean and higenic. There are many windows to get clean air."
   },
   {
-    imageUrl: "https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80",
-    name: "Paul Starr",
+    imageUrl: "Adarsh Ranjan.png",
+    name: "Adarsh Ranjan",
     rating: 5,
-    testimonial: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit esse delectus, maiores fugit, reiciendis culpa inventore sint accusantium libero dolore eos quasi a ex aliquam molestiae. Tenetur hic delectus maxime."
+    testimonial: "Best place to stay if you are in viman nagar very good hospitality and room are pretty much clear and hygienic. Must recommended for couples nice location and high security. The rooms are as same as shown in pictures."
   },
   {
-    imageUrl: "https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80",
-    name: "Paul Starr",
+    imageUrl: "Ishan Mahajan.png",
+    name: "Ishan Mahajan",
     rating: 5,
-    testimonial: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, fuga?"
+    testimonial: "Great stay, rooms were very clean and amenities were good as well. Highly recommended."
   },
   {
-    imageUrl: "https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80",
-    name: "Paul Starr",
+    imageUrl: "/Brijesh BShetty.png",
+    name: "Brijesh BShetty",
     rating: 5,
-    testimonial: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate officia natus blanditiis rerum incidunt ex autem repudiandae doloribus eveniet quia? Culpa commodi quae atque perspiciatis? Provident, magni beatae saepe porro aspernatur facere neque sunt possimus assumenda perspiciatis aperiam quisquam animi libero voluptatem fuga. Repudiandae, facere? Nemo reprehenderit quas ratione quis."
+    testimonial: "My stay at the White Castle Heritage was a wonderful experience. I had to stay here for a few days and the staff and the owner of the hotel were really friendly and welcoming. I would definitely recommend this place to anyone looking for a budget stay around the viman nagar area. If I have to comeback. I would stay here for sure."
   },
   {
-    imageUrl: "https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80",
-    name: "Paul Starr",
+    imageUrl: "Vinuth A.png",
+    name: "Vinuth A",
     rating: 5,
-    testimonial: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, rerum. Nobis laborum praesentium necessitatibus vero."
+    testimonial: "Staff from the hotel was very helpful and understanding and was always been supportive and ensured the room and washrooms were clean all the day."
   },
   {
-    imageUrl: "https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80",
-    name: "Paul Starr",
+    imageUrl: "Piyush MilindKamble.png",
+    name: "Piyush MilindKamble",
     rating: 5,
-    testimonial: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores quaerat quasi ipsa repellendus quam! Beatae pariatur quia distinctio fugit repellendus repudiandae nostrum consectetur quibusdam quo."
+    testimonial: "The staff is well behaved. The rooms are spacious and just as shown in the image. The rooms are hygenic. The location is near to phoneix but a little hard to find, apart from that - great service."
   },
   {
-    imageUrl: "https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80",
-    name: "Paul Starr",
+    imageUrl: "Uttam Raj.png",
+    name: "Uttam Raj",
     rating: 5,
-    testimonial: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit, modi!"
+    testimonial: "Nice place, no disturbance good receptionist, neatly maintained room, bathrooms. Cost also reasonable."
   },
   {
-    imageUrl: "https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80",
-    name: "Paul Starr",
+    imageUrl: "Rajesh Mane.png",
+    name: "Rajesh Mane",
     rating: 5,
-    testimonial: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam numquam, unde molestiae commodi temporibus dicta."
+    testimonial: "Very good Hotel for corporate & long stay. Very Spacious room with dinning table & balcony. Big bathroom with Jaguar fitting and very clean. Walking distance from Phoenix Mall"
   },
-  // Add more testimonial objects here
 ];
 
 export const Testimonials = () => {
   return (
-    <section className="bg-gray-50">
-      <div className="mx-auto max-w-6xl 2xl:max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+    <section id="reviews" className="bg-neutral-900">
+      <div className="mx-auto max-w-6xl 2xl:max-w-7xl py-12 px-6 lg:py-16">
         <TestimonialsHeader />
         <div className="mt-8 [column-fill:_balance] sm:columns-2 sm:gap-6 lg:columns-3 lg:gap-8">
           {testimonialsData.map((testimonial, index) => (

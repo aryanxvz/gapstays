@@ -5,7 +5,7 @@ interface StarRatingProps {
 
 export const StarRating = ({ rating }: StarRatingProps) => {
   return (
-    <div className="flex justify-center gap-0.5 text-orange-500">
+    <div className="flex justify-start gap-0.5 text-orange-500">
       {[...Array(5)].map((_, index) => (
         <svg
           key={index}
