@@ -2,27 +2,55 @@
 import React, { useState, KeyboardEvent } from 'react';
 import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
-import { ChevronLeft, ChevronRight, Plus } from 'lucide-react';
+import { ChevronDown, ChevronLeft, ChevronRight, ChevronUp } from 'lucide-react';
+import NextImage from 'next/image';
 
 export const Gallery = () => {
-  // Extended image array with 20+ images (first 6 shown initially)
   const images = [
-    "https://images.unsplash.com/photo-1566073771259-6a8506099945",
-    "https://images.unsplash.com/photo-1584132967334-10e028bd69f7",
-    "https://images.unsplash.com/photo-1571896349842-33c89424de2d",
-    "https://images.unsplash.com/photo-1564501049412-61c2a3083791",
-    "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9",
-    "https://images.unsplash.com/photo-1568084680786-a84f91d1153c",
-    // Add more image URLs here...
+    "/gallery/Gapstays-2.jpg",
+    "/gallery/Gapstays-3.jpg",
+    "/gallery/Gapstays-4.jpg",
+    "/gallery/Gapstays-5.jpg",
+    "/gallery/Gapstays-6.jpg",
+    "/gallery/Gapstays-7.jpg",
+    "/gallery/Gapstays-8.jpg",
+    "/gallery/Gapstays-9.jpg",
+    "/gallery/Gapstays-10.jpg",
+    "/gallery/Gapstays-11.jpg",
+    "/gallery/Gapstays-12.jpg",
+    "/gallery/Gapstays-13.jpg",
+    "/gallery/Gapstays-14.jpg",
+    "/gallery/Gapstays-15.jpg",
+    "/gallery/Gapstays-16.jpg",
+    "/gallery/Gapstays-17.jpg",
+    "/gallery/Gapstays-20.jpg",
+    "/gallery/Gapstays-21.jpg",
+    "/gallery/Gapstays-22.jpg",
+    "/gallery/Gapstays-24.jpg",
+    "/gallery/Gapstays-26.jpg",
+    "/gallery/Gapstays-27.jpg",
+    "/gallery/Gapstays-28.jpg",
+    "/gallery/Gapstays-29.jpg",
+    "/gallery/Gapstays-30.jpg",
+    "/gallery/Gapstays-31.jpg",
+    "/gallery/Gapstays-32.jpg",
+    "/gallery/Gapstays-34.jpg",
+    "/gallery/Gapstays-36.jpg",
+    "/gallery/Gapstays-37.jpg",
+    "/gallery/Gapstays-38.jpg",
+    "/gallery/Gapstays-39.jpg",
   ];
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [showAll, setShowAll] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  const [modalImageLoading, setModalImageLoading] = useState(true);
 
   const displayedImages = showAll ? images : images.slice(0, 6);
 
   const navigateImage = (direction: 'next' | 'prev') => {
+    setModalImageLoading(true);
     setCurrentImageIndex((prevIndex) => {
       if (direction === 'next') {
         return prevIndex === images.length - 1 ? 0 : prevIndex + 1;
@@ -36,6 +64,13 @@ export const Gallery = () => {
     if (e.key === 'ArrowLeft') navigateImage('prev');
     if (e.key === 'ArrowRight') navigateImage('next');
     if (e.key === 'Escape') setIsModalOpen(false);
+  };
+
+  const handleToggleImages = () => {
+    setShowAll(!showAll);
+    if (showAll) {
+      document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
@@ -58,32 +93,49 @@ export const Gallery = () => {
             <div
               key={index}
               onClick={() => {
+                setModalImageLoading(true);
                 setCurrentImageIndex(index);
                 setIsModalOpen(true);
               }}
               className="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group"
             >
-              <div className="relative">
-                <img
-                  src={`${imageUrl}?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80`}
+              <div className="relative aspect-[4/3] w-full">
+                <NextImage
+                  src={imageUrl}
                   alt={`Hotel Image ${index + 1}`}
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className={`object-cover group-hover:scale-105 transition-transform duration-300 ${
+                    isLoading ? 'opacity-0' : 'opacity-100'
+                  }`}
+                  onLoadingComplete={() => setIsLoading(false)}
+                  priority={index < 6}
+                  quality={75}
                 />
-                <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 hover:cursor-pointer bg-neutral-900 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Show More Button */}
-        {!showAll && images.length > 6 && (
+        {/* Toggle Images Button */}
+        {images.length > 6 && (
           <div className="text-center mt-8">
             <Button
-              onClick={() => setShowAll(true)}
+              onClick={handleToggleImages}
               className="inline-flex items-center gap-2"
             >
-              <Plus className="w-4 h-4" />
-              Show More Images
+              {showAll ? (
+                <>
+                  <ChevronUp className="w-4 h-4" />
+                  Collapse Images
+                </>
+              ) : (
+                <>
+                  <ChevronDown className="w-4 h-4" />
+                  Show All 32 Images
+                </>
+              )}
             </Button>
           </div>
         )}
@@ -91,7 +143,7 @@ export const Gallery = () => {
         {/* Modal */}
         <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
           <DialogContent 
-            className="max-w-4xl w-full bg-black/95 border-none p-0"
+            className="max-w-4xl w-full bg-neutral-900/95 border-none p-0"
             onKeyDown={handleKeyPress}
           >
             <DialogTitle className="sr-only">
@@ -99,16 +151,31 @@ export const Gallery = () => {
             </DialogTitle>
             
             <div className="relative h-[80vh] flex items-center justify-center">
-              <img
-                src={`${images[currentImageIndex]}?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80`}
-                alt={`Hotel Image ${currentImageIndex + 1}`}
-                className="max-h-full max-w-full object-contain"
-              />
+              <div className="relative w-full h-full">
+                <NextImage
+                  src={images[currentImageIndex]}
+                  alt={`Hotel Image ${currentImageIndex + 1}`}
+                  fill
+                  sizes="100vw"
+                  className={`object-contain transition-opacity duration-300 ${
+                    modalImageLoading ? 'opacity-0' : 'opacity-100'
+                  }`}
+                  onLoadingComplete={() => setModalImageLoading(false)}
+                  quality={90}
+                />
+              </div>
+              
+              {/* Loading indicator */}
+              {modalImageLoading && (
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-8 h-8 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
+                </div>
+              )}
               
               {/* Navigation Arrows */}
               <Button
                 variant="ghost"
-                className="absolute left-2 p-2 text-white hover:bg-black/50"
+                className="absolute left-2 p-2 text-white hover:bg-neutral-900/50"
                 onClick={(e) => {
                   e.stopPropagation();
                   navigateImage('prev');
@@ -120,7 +187,7 @@ export const Gallery = () => {
               
               <Button
                 variant="ghost"
-                className="absolute right-2 p-2 text-white hover:bg-black/50"
+                className="absolute right-2 p-2 text-white hover:bg-neutral-900/50"
                 onClick={(e) => {
                   e.stopPropagation();
                   navigateImage('next');
@@ -131,7 +198,7 @@ export const Gallery = () => {
               </Button>
 
               {/* Image Counter */}
-              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/75 px-4 py-2 rounded-full text-white text-sm">
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-neutral-900/75 px-4 py-2 rounded-full text-white text-sm">
                 {currentImageIndex + 1} / {images.length}
               </div>
             </div>
