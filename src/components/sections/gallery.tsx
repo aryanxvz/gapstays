@@ -7,37 +7,36 @@ import NextImage from 'next/image';
 
 export const Gallery = () => {
   const images = [
+    
     "/gallery/Gapstays-2.jpg",
-    "/gallery/Gapstays-3.jpg",
     "/gallery/Gapstays-4.jpg",
+    "/gallery/Gapstays-8.jpg",
+    "/gallery/Gapstays-22.jpg",
+    "/gallery/Gapstays-24.jpg",
+    "/gallery/Gapstays-3.jpg",
     "/gallery/Gapstays-5.jpg",
     "/gallery/Gapstays-6.jpg",
     "/gallery/Gapstays-7.jpg",
-    "/gallery/Gapstays-8.jpg",
-    "/gallery/Gapstays-9.jpg",
-    "/gallery/Gapstays-10.jpg",
     "/gallery/Gapstays-11.jpg",
     "/gallery/Gapstays-12.jpg",
-    "/gallery/Gapstays-13.jpg",
-    "/gallery/Gapstays-14.jpg",
-    "/gallery/Gapstays-15.jpg",
-    "/gallery/Gapstays-16.jpg",
-    "/gallery/Gapstays-17.jpg",
     "/gallery/Gapstays-20.jpg",
+    "/gallery/Gapstays-15.jpg",
+    "/gallery/Gapstays-17.jpg",
+    "/gallery/Gapstays-14.jpg",
+    "/gallery/Gapstays-9.jpg",
     "/gallery/Gapstays-21.jpg",
-    "/gallery/Gapstays-22.jpg",
-    "/gallery/Gapstays-24.jpg",
+    "/gallery/Gapstays-10.jpg",
     "/gallery/Gapstays-26.jpg",
     "/gallery/Gapstays-27.jpg",
     "/gallery/Gapstays-28.jpg",
     "/gallery/Gapstays-29.jpg",
+    "/gallery/Gapstays-36.jpg",
     "/gallery/Gapstays-30.jpg",
     "/gallery/Gapstays-31.jpg",
     "/gallery/Gapstays-32.jpg",
     "/gallery/Gapstays-34.jpg",
-    "/gallery/Gapstays-36.jpg",
-    "/gallery/Gapstays-37.jpg",
     "/gallery/Gapstays-38.jpg",
+    "/gallery/Gapstays-37.jpg",
     "/gallery/Gapstays-39.jpg",
   ];
 
@@ -74,7 +73,7 @@ export const Gallery = () => {
   };
 
   return (
-    <section id="gallery" className="bg-gray-50 py-12">
+    <section id="gallery" className="bg-gray-50 py-12 scroll-mt-16">
       <div className="mx-auto max-w-6xl 2xl:max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Gallery Header */}
         <div className="mb-12 text-center">
@@ -133,7 +132,7 @@ export const Gallery = () => {
               ) : (
                 <>
                   <ChevronDown className="w-4 h-4" />
-                  Show All 32 Images
+                  Show All 30 Images
                 </>
               )}
             </Button>
