@@ -5,6 +5,7 @@ import { Footer } from "@/components/sections/footer";
 import { Testimonials } from "@/components/sections/testimonials";
 import { Gallery } from "@/components/sections/gallery";
 import { Hero } from "@/components/sections/hero";
+import { Booking } from "@/components/sections/booking";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <About />
+      <Booking />
       <Testimonials />
       <Gallery />
       <Location />

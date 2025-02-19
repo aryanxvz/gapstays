@@ -74,24 +74,16 @@ export const Hero = () => {
           }}
           viewport={{ once: true }}
           className="flex flex-col md:flex-row gap-4 justify-center items-center mt-8">
-          <motion.a 
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+          <motion.div 
             onClick={() => scrollToSection('booking')}
-            className="bg-orange-500 hover:bg-orange-400 text-white font-bold py-4 px-8 rounded-full transition-all flex items-center gap-2 cursor-pointer">
+            className="bg-orange-500 hover:bg-orange-600 hover:scale-105 duration-300 text-white font-bold py-4 px-8 rounded-full transition-all flex items-center gap-2 cursor-pointer">
             <span>Book Your Stay</span>
-          </motion.a>
-          <motion.a 
-            whileHover={{ 
-              scale: 1.03,
-              borderColor: "#FF6B35",
-              color: "#FF6B35"
-            }}
-            whileTap={{ scale: 0.95 }}
+          </motion.div>
+          <motion.div 
             onClick={() => scrollToSection('gallery')}
-            className="bg-transparent border-2 border-white text-white font-bold py-4 px-8 rounded-full transition-all cursor-pointer">
+            className="bg-transparent border-2 hover:scale-105 duration-300 border-white hover:border-orange-500 text-white hover:text-orange-500 font-bold py-4 px-8 rounded-full transition-all cursor-pointer">
             Explore Gallery
-          </motion.a>
+          </motion.div>
         </motion.div>
       </LampContainer>
       
