@@ -61,7 +61,7 @@ const testimonialsData = [
 export const Testimonials = () => {
   return (
     <section id="reviews" className="bg-neutral-900">
-      <div className="mx-auto max-w-6xl 2xl:max-w-7xl py-12 px-6 lg:py-16">
+      <div className="mx-auto max-w-6xl 2xl:max-w-7xl py-12 px-6 lg:py-20">
         <TestimonialsHeader />
         <div className="mt-8 [column-fill:_balance] sm:columns-2 sm:gap-6 lg:columns-3 lg:gap-8">
           {testimonialsData.map((testimonial, index) => (

@@ -7,7 +7,6 @@ import NextImage from 'next/image';
 
 export const Gallery = () => {
   const images = [
-    
     "/gallery/Gapstays-2.jpg",
     "/gallery/Gapstays-4.jpg",
     "/gallery/Gapstays-8.jpg",
@@ -73,7 +72,7 @@ export const Gallery = () => {
   };
 
   return (
-    <section id="gallery" className="bg-gray-50 py-12 scroll-mt-16">
+    <section id="gallery" className="bg-gray-50 py-12 pb-20 scroll-mt-16">
       <div className="mx-auto max-w-6xl 2xl:max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Gallery Header */}
         <div className="mb-12 text-center">
