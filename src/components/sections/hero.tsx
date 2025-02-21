@@ -88,7 +88,7 @@ export const Hero = () => {
       </LampContainer>
       
       <motion.div 
-        className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white cursor-pointer z-10"
+        className="absolute bottom-16 left-1/2 transform -translate-x-1/2 text-white cursor-pointer z-10"
         onClick={() => scrollToSection('about')}
         animate={{ 
           y: [0, -10, 0]
