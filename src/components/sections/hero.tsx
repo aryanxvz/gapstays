@@ -13,7 +13,7 @@ export const Hero = () => {
 
   return (
     <section id="home" className="min-h-screen bg-neutral-900 flex items-center justify-center relative">
-      <LampContainer className="pt-20">
+      <LampContainer className="pt-20 px-4 sm:px-6">
         <motion.h1
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -23,7 +23,7 @@ export const Hero = () => {
             ease: "easeInOut",
           }}
           viewport={{ once: true }}
-          className="mb-4 bg-gradient-to-br from-slate-100 to-slate-300 bg-clip-text text-center text-4xl tracking-tight text-transparent font-extrabold md:text-7xl">
+          className="mb-4 bg-gradient-to-br from-slate-100 to-slate-300 bg-clip-text text-center text-5xl tracking-tight text-transparent font-extrabold md:text-7xl">
             Welcome to <span className="text-orange-500">GAPSTAYS</span>
         </motion.h1>
         
@@ -46,7 +46,7 @@ export const Hero = () => {
               ease: [0.22, 1, 0.36, 1],
             }}
             viewport={{ once: true }}
-            className="text-4xl text-gray-200 font-bold">
+            className="text-3xl md:text-4xl text-gray-200 font-bold">
             Experience Comfort Without Compromise
           </motion.div>
           
@@ -59,7 +59,7 @@ export const Hero = () => {
               ease: [0.22, 1, 0.36, 1],
             }}
             viewport={{ once: true }}
-            className="text-gray-300 text-2xl font-normal px-4">
+            className="text-gray-300 text-lg sm:text-xl md:text-2xl font-normal px-4">
             Your perfect stay awaits in the heart of the city
           </motion.div>
         </motion.div>
@@ -73,15 +73,15 @@ export const Hero = () => {
             ease: "easeInOut",
           }}
           viewport={{ once: true }}
-          className="flex flex-col md:flex-row gap-4 justify-center items-center mt-8">
+          className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8">
           <motion.div 
             onClick={() => scrollToSection('booking')}
-            className="bg-orange-500 hover:bg-orange-600 hover:scale-105 duration-300 text-white font-bold py-4 px-8 rounded-full transition-all flex items-center gap-2 cursor-pointer">
+            className="w-full sm:w-auto bg-orange-500 hover:bg-orange-600 hover:scale-105 duration-300 text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-full transition-all flex items-center justify-center gap-2 cursor-pointer">
             <span>Book Your Stay</span>
           </motion.div>
           <motion.div 
             onClick={() => scrollToSection('gallery')}
-            className="bg-transparent border-2 hover:scale-105 duration-300 border-white hover:border-orange-500 text-white hover:text-orange-500 font-bold py-4 px-8 rounded-full transition-all cursor-pointer">
+            className="w-full sm:w-auto bg-transparent border-2 hover:scale-105 duration-300 border-white hover:border-orange-500 text-white hover:text-orange-500 font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-full transition-all cursor-pointer text-center">
             Explore Gallery
           </motion.div>
         </motion.div>
