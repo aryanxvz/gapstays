@@ -13,12 +13,12 @@ export const Gallery = () => {
     "/gallery/Gapstays-22.jpg", //4
     "/gallery/Gapstays-24.jpg", //5
     "/gallery/Gapstays-3.jpg", //6
-    // "/gallery/Gapstays-5.jpg",
-    // "/gallery/Gapstays-6.jpg",
-    // "/gallery/Gapstays-7.jpg",
-    // "/gallery/Gapstays-11.jpg",
-    // "/gallery/Gapstays-12.jpg",
-    // "/gallery/Gapstays-20.jpg",
+    "/gallery/Gapstays-5.jpg",
+    "/gallery/Gapstays-6.jpg",
+    "/gallery/Gapstays-7.jpg",
+    "/gallery/Gapstays-11.jpg",
+    "/gallery/Gapstays-12.jpg",
+    "/gallery/Gapstays-20.jpg",
     // "/gallery/Gapstays-15.jpg",
     // "/gallery/Gapstays-17.jpg",
     // "/gallery/Gapstays-14.jpg",
