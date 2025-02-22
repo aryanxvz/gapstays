@@ -1,5 +1,6 @@
-import { JSX } from "react"
-import { FaClock, FaWifi, FaConciergeBell, FaBroom, FaSoap, FaWind, FaMugHot, FaBed, FaTint } from "react-icons/fa"
+"use client"
+import { JSX, useState } from "react";
+import { FaClock, FaWifi, FaConciergeBell, FaBroom, FaSoap, FaWind, FaMugHot, FaBed, FaTint, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 interface FeatureCard {
   title: string;
@@ -29,21 +30,66 @@ const FeatureBox = ({ title, description, icon }: FeatureCard) => (
   </div>
 );
 
+const roomImages = [
+  "/images/room1.jpg",
+  "/images/room2.jpg",
+  "/images/room3.jpg"
+];
+
+const RoomCarousel = () => {
+  const [currentImage, setCurrentImage] = useState(0);
+
+  const nextImage = () => setCurrentImage((prev) => (prev + 1) % roomImages.length);
+  const prevImage = () => setCurrentImage((prev) => (prev - 1 + roomImages.length) % roomImages.length);
+
+  return (
+    <div className="relative w-full max-w-6xl 2xl:max-w-7xl mx-auto overflow-hidden rounded-lg shadow-lg">
+      <img src={roomImages[currentImage]} alt="Room" className="w-full h-80 object-cover transition duration-500" />
+      <button onClick={prevImage} className="absolute left-3 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full">
+        <FaChevronLeft className="text-xl" />
+      </button>
+      <button onClick={nextImage} className="absolute right-3 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full">
+        <FaChevronRight className="text-xl" />
+      </button>
+    </div>
+  );
+};
+
 export const Rooms = () => {
   return (
-    <section id="rooms" className="bg-neutral-900">
+    <section id="rooms" className="bg-neutral-900 text-white">
       <div className="mx-auto max-w-6xl 2xl:max-w-7xl py-12 px-6 lg:py-28">
-        <div className="">
-          <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white pb-4 text-center">Hotel Amenities</div>
-          <div className="w-16 sm:w-20 h-1 bg-orange-500 mx-auto"></div>
+
+        {/* Room Description Section */}
+        <div className="text-center">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">Our Premium Rooms</h2>
+          <p className="text-gray-300 text-lg sm:text-xl mt-3">Spacious & comfortable stay for two guests</p>
+          <div className="w-16 sm:w-20 h-1 bg-orange-500 mx-auto my-4"></div>
+          
+          <p className="text-gray-400 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
+            Experience luxury with our <span className="text-orange-400 font-semibold">250 sq. ft.</span> room, featuring a 
+            <span className="text-orange-400 font-semibold"> queen-size bed</span>, a private bathroom, and modern amenities.
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 rounded-lg mt-8 sm:mt-12 w-full">
-          {features.map((feature, index) => (
-            <FeatureBox key={index} {...feature} />
-          ))}
+        {/* Room Image Carousel */}
+        <div className="mt-8">
+          <RoomCarousel />
         </div>
+
+        {/* Hotel Amenities Section */}
+        <div className="mt-16">
+          <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-center">Hotel Amenities</div>
+          <div className="w-16 sm:w-20 h-1 bg-orange-500 mx-auto"></div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 rounded-lg mt-8 sm:mt-12 w-full">
+            {features.map((feature, index) => (
+              <FeatureBox key={index} {...feature} />
+            ))}
+          </div>
+        </div>
+
       </div>
     </section>
-  )
-}
+  );
+};
