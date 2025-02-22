@@ -19,7 +19,7 @@ export const LampContainer = ({
     >
       <div className="relative flex w-full flex-1 scale-y-125 items-center justify-center isolate z-0 ">
         <motion.div
-          initial={{ opacity: 0.5, width: "8rem" }}
+          initial={{ opacity: 0.5, width: "7rem" }}
           whileInView={{ opacity: 1, width: "15rem" }}
           transition={{
             delay: 0.3,
