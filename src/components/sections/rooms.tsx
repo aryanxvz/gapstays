@@ -62,9 +62,9 @@ export const Rooms = () => {
 
         {/* Room Description Section */}
         <div className="text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">Our Premium Rooms</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">Our Rooms</h2>
           <p className="text-gray-300 text-lg sm:text-xl mt-3">Spacious & comfortable stay for two guests</p>
-          <div className="w-16 sm:w-20 h-1 bg-orange-500 mx-auto my-4"></div>
+          <div className="w-16 sm:w-20 h-1 bg-orange-500 mx-auto my-4 mb-8"></div>
           
           <p className="text-gray-400 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
             Experience luxury with our <span className="text-orange-400 font-semibold">250 sq. ft.</span> room, featuring a 
