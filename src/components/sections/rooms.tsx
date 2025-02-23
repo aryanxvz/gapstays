@@ -1,5 +1,6 @@
 "use client"
 import { JSX, useState } from "react";
+import Image from "next/image";
 import { FaClock, FaWifi, FaConciergeBell, FaBroom, FaSoap, FaWind, FaMugHot, FaBed, FaTint, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 interface FeatureCard {
@@ -31,24 +32,89 @@ const FeatureBox = ({ title, description, icon }: FeatureCard) => (
 );
 
 const roomImages = [
-  "/images/room1.jpg",
-  "/images/room2.jpg",
-  "/images/room3.jpg"
+  "/gallery/Gapstays-2.jpg",
+  "/gallery/Gapstays-8.jpg",
+  "/gallery/Gapstays-3.jpg",
+  "/gallery/Gapstays-4.jpg",
+  "/gallery/Gapstays-11.jpg",
+  "/gallery/Gapstays-5.jpg",
+  "/gallery/Gapstays-6.jpg",
+  "/gallery/Gapstays-7.jpg",
+  "/gallery/Gapstays-9.jpg",
+  "/gallery/Gapstays-24.jpg",
 ];
 
 const RoomCarousel = () => {
   const [currentImage, setCurrentImage] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
 
-  const nextImage = () => setCurrentImage((prev) => (prev + 1) % roomImages.length);
-  const prevImage = () => setCurrentImage((prev) => (prev - 1 + roomImages.length) % roomImages.length);
+  const handleImageTransition = (newIndex: number) => {
+    if (isAnimating) return;
+    
+    setIsAnimating(true);
+    setCurrentImage(newIndex);
+    
+    setTimeout(() => {
+      setIsAnimating(false);
+    }, 500);
+  };
+
+  const nextImage = () => {
+    const newIndex = (currentImage + 1) % roomImages.length;
+    handleImageTransition(newIndex);
+  };
+
+  const prevImage = () => {
+    const newIndex = (currentImage - 1 + roomImages.length) % roomImages.length;
+    handleImageTransition(newIndex);
+  };
 
   return (
     <div className="relative w-full max-w-6xl 2xl:max-w-7xl mx-auto overflow-hidden rounded-lg shadow-lg">
-      <img src={roomImages[currentImage]} alt="Room" className="w-full h-80 object-cover transition duration-500" />
-      <button onClick={prevImage} className="absolute left-3 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full">
+      <div className="aspect-[12/7] relative">
+        {roomImages.map((src, index) => (
+          <div
+            key={src}
+            className={`absolute w-full h-full transition-opacity duration-500 ease-in-out ${
+              index === currentImage ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            {/* Blurred background image */}
+            <Image
+              src={src}
+              alt=""
+              fill
+              sizes="100vw"
+              className="object-cover blur-xl scale-110 brightness-50"
+              priority={index === 0}
+            />
+            
+            {/* Main image */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <Image
+                src={src}
+                alt={`Room view ${index + 1}`}
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1536px) 80vw, 1536px"
+                priority={index === 0}
+                className="object-contain"
+              />
+            </div>
+          </div>
+        ))}
+      </div>
+      <button 
+        onClick={prevImage} 
+        disabled={isAnimating}
+        className="absolute left-3 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full transition-opacity hover:bg-black/70 disabled:opacity-50"
+      >
         <FaChevronLeft className="text-xl" />
       </button>
-      <button onClick={nextImage} className="absolute right-3 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full">
+      <button 
+        onClick={nextImage}
+        disabled={isAnimating}
+        className="absolute right-3 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full transition-opacity hover:bg-black/70 disabled:opacity-50"
+      >
         <FaChevronRight className="text-xl" />
       </button>
     </div>
@@ -59,8 +125,6 @@ export const Rooms = () => {
   return (
     <section id="rooms" className="bg-neutral-900 text-white">
       <div className="mx-auto max-w-6xl 2xl:max-w-7xl py-12 px-6 lg:py-28">
-
-        {/* Room Description Section */}
         <div className="text-center">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">Our Rooms</h2>
           <p className="text-gray-300 text-lg sm:text-xl mt-3">Spacious & comfortable stay for two guests</p>
@@ -72,12 +136,10 @@ export const Rooms = () => {
           </p>
         </div>
 
-        {/* Room Image Carousel */}
         <div className="mt-8">
           <RoomCarousel />
         </div>
 
-        {/* Hotel Amenities Section */}
         <div className="mt-16">
           <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-center">Hotel Amenities</div>
           <div className="w-16 sm:w-20 h-1 bg-orange-500 mx-auto"></div>
@@ -88,7 +150,6 @@ export const Rooms = () => {
             ))}
           </div>
         </div>
-
       </div>
     </section>
   );
