@@ -3,7 +3,7 @@ import { TestimonialsHeader } from "../testimonial-header";
 
 const testimonialsData = [
   {
-    imageUrl: "/avatars/nikhil.png",
+    imageUrl: "/avatars/Nikhil.png",
     name: "Nikhil",
     rating: 5,
     testimonial: "Overall service was good. Rooms were clean, staff was chill and friendly. Its good for Couple, keeping in mind - Lodge location is bit into public area. But it was fine. They asked Rs. 1800/- for one day."
