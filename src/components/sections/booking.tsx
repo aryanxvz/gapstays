@@ -1,4 +1,5 @@
 "use client"
+import Image from 'next/image';
 import React from 'react';
 
 export const Booking = () => {
@@ -75,9 +76,16 @@ export const Booking = () => {
             
             <div className="flex-1 flex flex-col items-center justify-center py-4 sm:py-8">
               {/* Placeholder for QR code - add your actual QR component here */}
-              <div className="w-32 h-32 sm:w-48 sm:h-48 bg-gray-100 rounded-lg flex items-center justify-center mb-4">
+              {/* <div className="w-32 h-32 sm:w-48 sm:h-48 bg-gray-100 rounded-lg flex items-center justify-center mb-4">
                 <span className="text-gray-400 text-xs">QR Code</span>
-              </div>
+              </div> */}
+              <Image 
+                src={'/gapstays-qr.png'} 
+                alt={'Gapstays QR Code'} 
+                width={220} 
+                height={200} 
+                className="my-4"
+              />
               <p className="mt-2 sm:mt-4 text-gray-600 text-center text-sm sm:text-base">Scan the QR code to make a payment</p>
             </div>
           </div>
