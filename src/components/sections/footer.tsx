@@ -1,5 +1,6 @@
 import React from 'react';
 import { Mail, MapPin, Phone } from 'lucide-react';
+import Link from 'next/link';
 
 export const Footer = () => {
   return (
@@ -19,19 +20,19 @@ export const Footer = () => {
             <h3 className="text-white text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <a href="/guest-policy" className="hover:text-orange-500 transition-colors">
+                <Link href="/guest-policy" className="hover:text-orange-500 transition-colors">
                   Guest Policy
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/privacy-policy" className="hover:text-orange-500 transition-colors">
+                <Link href="/privacy-policy" className="hover:text-orange-500 transition-colors">
                   Privacy Policy
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/cancellation-policy" className="hover:text-orange-500 transition-colors">
+                <Link href="/cancellation-policy" className="hover:text-orange-500 transition-colors">
                   Cancellation and Refund Policy
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
