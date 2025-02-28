@@ -1,7 +1,7 @@
 "use client"
 import { JSX, useState } from "react";
 import Image from "next/image";
-import { FaClock, FaWifi, FaConciergeBell, FaBroom, FaSoap, FaWind, FaMugHot, FaBed, FaTint, FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { FaClock, FaWifi, FaConciergeBell, FaBroom, FaSoap, FaWind, FaMugHot, FaBed, FaTint, FaChevronLeft, FaChevronRight, FaMoneyBillWave, FaCalendarAlt } from "react-icons/fa";
 
 interface FeatureCard {
   title: string;
@@ -21,6 +21,14 @@ const features: FeatureCard[] = [
   { title: "Free Water Bottles", description: "Stay hydrated with complimentary bottled water.", icon: <FaTint className="text-orange-500 text-2xl" /> },
 ];
 
+// Additional room details
+const roomDetails = {
+  checkIn: "11:00 AM",
+  checkOut: "11:00 AM",
+  price: "₹2,000/-",
+  capacity: "2 Guests"
+};
+
 const FeatureBox = ({ title, description, icon }: FeatureCard) => (
   <div className="bg-gray-100 p-4 sm:p-6 flex flex-col items-center lg:items-start justify-center shadow-md rounded-lg hover:scale-105 transition duration-200">
     <div className="flex items-center gap-2 sm:gap-3">
@@ -28,6 +36,44 @@ const FeatureBox = ({ title, description, icon }: FeatureCard) => (
       <p className="text-lg sm:text-xl font-bold text-black">{title}</p>
     </div>
     <p className="text-sm text-center lg:text-start sm:text-base text-gray-600 font-normal mt-2">{description}</p>
+  </div>
+);
+
+const CompactRoomDetails = () => (
+  <div className="bg-neutral-900 text-orange-500 py-3 px-4 rounded-lg mt-6 mx-auto max-w-5xl shadow-md">
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div className="flex items-center justify-center xs:justify-start gap-3 p-2">
+        <FaCalendarAlt className="text-2xl flex-shrink-0" />
+        <div>
+          <p className="text-sm sm:text-base font-medium text-gray-300">Check-in</p>
+          <p className="font-bold text-base sm:text-lg">{roomDetails.checkIn}</p>
+        </div>
+      </div>
+      
+      <div className="flex items-center justify-center xs:justify-start gap-3 p-2">
+        <FaCalendarAlt className="text-2xl flex-shrink-0" />
+        <div>
+          <p className="text-sm sm:text-base font-medium text-gray-300">Check-out</p>
+          <p className="font-bold text-base sm:text-lg">{roomDetails.checkOut}</p>
+        </div>
+      </div>
+      
+      <div className="flex items-center justify-center xs:justify-start gap-3 p-2">
+        <FaMoneyBillWave className="text-2xl flex-shrink-0" />
+        <div>
+          <p className="text-sm sm:text-base font-medium text-gray-300">Price</p>
+          <p className="font-bold text-base sm:text-lg">{roomDetails.price}</p>
+        </div>
+      </div>
+      
+      <div className="flex items-center justify-center xs:justify-start gap-3 p-2">
+        <FaBed className="text-2xl flex-shrink-0" />
+        <div>
+          <p className="text-sm sm:text-base font-medium text-gray-300">Capacity</p>
+          <p className="font-bold text-base sm:text-lg">{roomDetails.capacity}</p>
+        </div>
+      </div>
+    </div>
   </div>
 );
 
@@ -135,8 +181,11 @@ export const Rooms = () => {
             <span className="text-orange-400 font-semibold"> queen-size bed</span>, a private bathroom, and modern amenities.
           </p>
         </div>
+        
+        {/* New Compact Room Details */}
+        <CompactRoomDetails />
 
-        <div className="mt-8">
+        <div className="mt-6">
           <RoomCarousel />
         </div>
 
