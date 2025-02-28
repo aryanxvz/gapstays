@@ -24,7 +24,6 @@ const useCountUp = (end: number, duration: number = 2500, start: number = 0) => 
     if (!isAnimating) return;
 
     const startTime = Date.now();
-    const endTime = startTime + duration;
 
     const updateCount = () => {
       const now = Date.now();
