@@ -23,8 +23,8 @@ const features: FeatureCard[] = [
 
 // Additional room details
 const roomDetails = {
-  checkIn: "11:00 AM",
-  checkOut: "11:00 AM",
+  checkIn: "12:00 PM",
+  checkOut: "10:00 AM",
   price: "₹2,000/-",
   capacity: "2 Guests"
 };
