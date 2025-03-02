@@ -99,6 +99,23 @@ const policySections: PolicySection[] = [
           "Significant changes will be communicated via our website, email notifications, or app alerts, giving you ample time to review modifications before they take effect."
         ],
         bulletStyle: 'bullet'
+      },
+      {
+        heading: "Gapstays Hotels reserve the right to deny check-in in the following circumstances:",
+        points: [
+          "If guests fail to provide a valid government-issued photo ID with clearly visible information that matches the booking details. Expired, damaged, or photocopied IDs may not be accepted at the discretion of the property management.",
+          "If minor guests are unaccompanied by a guardian or parent. Minors (under 18 years) must be accompanied by an adult with proper documentation establishing their relationship or guardianship status.",
+          "If the hotel deems the guest's check-in suspicious or inappropriate, including cases of visible intoxication, threatening behavior toward staff, attempts to circumvent security protocols, or presenting false information during registration."
+        ],
+        bulletStyle: 'number'
+      },
+      {
+        heading: "Post-Denial Procedures",
+        points: [
+          "In such cases, Gapstays Hotel will not be liable to provide a refund as these requirements are clearly communicated during the booking process and constitute a breach of the reservation agreement.",
+          "Guests denied check-in may contact Gapstays customer support for assistance in finding alternative accommodation, though any price difference or additional costs will be the guest's responsibility."
+        ],
+        bulletStyle: 'bullet'
       }
     ]
   },
@@ -140,7 +157,7 @@ const policySections: PolicySection[] = [
     ]
   },
   {
-    title: "Gapstays Hotel Guest Policy",
+    title: "Guest Policy",
     items: [
       {
         heading: "Check-in & Age Requirement:",
@@ -199,12 +216,7 @@ const policySections: PolicySection[] = [
           "Complaints raised after check-out will not be entertained for compensation purposes. All concerns must be reported while on property to allow management the opportunity to address them immediately."
         ],
         bulletStyle: 'bullet'
-      }
-    ]
-  },
-  {
-    title: "Unmarried Couples and Local ID Policy",
-    items: [
+      },
       {
         heading: "Couple Check-in Guidelines",
         points: [
@@ -224,28 +236,6 @@ const policySections: PolicySection[] = [
       }
     ]
   },
-  {
-    title: "Check-in Denial Policy",
-    items: [
-      {
-        heading: "Gapstays Hotels reserve the right to deny check-in in the following circumstances:",
-        points: [
-          "If guests fail to provide a valid government-issued photo ID with clearly visible information that matches the booking details. Expired, damaged, or photocopied IDs may not be accepted at the discretion of the property management.",
-          "If minor guests are unaccompanied by a guardian or parent. Minors (under 18 years) must be accompanied by an adult with proper documentation establishing their relationship or guardianship status.",
-          "If the hotel deems the guest's check-in suspicious or inappropriate, including cases of visible intoxication, threatening behavior toward staff, attempts to circumvent security protocols, or presenting false information during registration."
-        ],
-        bulletStyle: 'number'
-      },
-      {
-        heading: "Post-Denial Procedures",
-        points: [
-          "In such cases, Gapstays Hotel will not be liable to provide a refund as these requirements are clearly communicated during the booking process and constitute a breach of the reservation agreement.",
-          "Guests denied check-in may contact Gapstays customer support for assistance in finding alternative accommodation, though any price difference or additional costs will be the guest's responsibility."
-        ],
-        bulletStyle: 'bullet'
-      }
-    ]
-  }
 ];
 
 const PolicyItem = ({ item, isDarkBg }: { item: PolicyItem; isDarkBg: boolean }) => {
@@ -287,7 +277,7 @@ const PolicySection = ({ section, index }: { section: PolicySection; index: numb
           <div className={`w-16 sm:w-20 h-1 bg-orange-500 mx-auto`}></div>
         </div>
 
-        <div className={`rounded-lg p-6 sm:p-8 ${isDarkBg ? 'bg-neutral-800' : 'bg-white'} shadow-sm`}>
+        <div className={`rounded-lg p-6 sm:p-8 lg:p-12 ${isDarkBg ? 'bg-neutral-800' : 'bg-white'} shadow-lg border-2 border-orange-500`}>
           {section.items.map((item, idx) => (
             <PolicyItem key={idx} item={item} isDarkBg={isDarkBg} />
           ))}
@@ -300,10 +290,10 @@ const PolicySection = ({ section, index }: { section: PolicySection; index: numb
 export const Policies = () => {
   return (
     <div className="w-full">
-      <section className="bg-gray-50 pt-16 sm:pt-20 pb-10 scroll-mt-16">
+      <section className="bg-neutral-900 pt-16 sm:pt-20 pb-10 scroll-mt-16">
         <div className="max-w-6xl 2xl:max-w-7xl mx-auto px-6">
           <div className="mb-8 sm:mb-12 text-center">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black pb-4">Our Policies</h1>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white pb-4">Our Policies</h1>
             <div className="w-16 sm:w-20 h-1 bg-orange-500 mx-auto"></div>
           </div>
         </div>
