@@ -35,7 +35,7 @@ export const Footer = () => {
                 </Link>
               </li>
             </ul>
-          </div>
+          </div> 
 
           <div className="flex flex-col items-center md:items-start">
             <h3 className="text-white text-lg font-semibold mb-4">Contact Us</h3>
