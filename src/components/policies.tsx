@@ -299,7 +299,7 @@ export const Policies = () => {
         <PolicySection key={index} section={section} index={index} />
       ))}
 
-      <section className="bg-gray-50 flex justify-center py-8">
+      <section className="bg-gray-50 flex justify-center pb-20">
         <div className="max-w-5xl mx-auto px-6">
           <div className="p-4 bg-orange-100 rounded-lg border-l-4 border-orange-500">
             <p className="text-base text-gray-800">
