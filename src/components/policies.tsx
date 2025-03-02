@@ -21,7 +21,6 @@ const policySections: PolicySection[] = [
         heading: "Information We Collect:",
         points: [
           "Personal details including name, email address, phone number, mailing address, payment information, and identification documents required for verification purposes.",
-          "Automatic data such as device information, IP address, browser type, operating system, browsing behavior, location data, and other technical information collected through cookies and similar technologies."
         ],
         bulletStyle: 'bullet'
       },
@@ -29,7 +28,6 @@ const policySections: PolicySection[] = [
         heading: "How We Collect Information:",
         points: [
           "Direct submission through registration forms, booking processes, customer service interactions, surveys, and when you communicate with us through any of our channels.",
-          "Automated tracking technologies when using our website, mobile application, and other digital platforms to enhance your experience and optimize our services."
         ],
         bulletStyle: 'bullet'
       },
@@ -46,7 +44,7 @@ const policySections: PolicySection[] = [
       {
         heading: "Use of Cookies and Tracking Technologies:",
         points: [
-          "Enhances personalization and user experience by remembering your preferences, login details, and previous interactions to provide seamless navigation and relevant content.",
+          "Enhances personalization and user experience by remembering your preferences, and previous interactions to provide seamless navigation and relevant content.",
           "Helps improve services and perform analytics by collecting anonymous statistical data about website usage, popular features, and potential areas for improvement to better meet your needs."
         ],
         bulletStyle: 'bullet'
@@ -79,7 +77,6 @@ const policySections: PolicySection[] = [
       {
         heading: "Security Measures:",
         points: [
-          "Industry-standard protections implemented to safeguard data including encryption, access controls, regular security assessments, and employee training on privacy and security practices.",
           "No system is completely secure; we continuously improve our protocols and promptly address any vulnerabilities while maintaining transparency about potential incidents affecting your data."
         ],
         bulletStyle: 'bullet'
@@ -96,27 +93,9 @@ const policySections: PolicySection[] = [
         heading: "Updates to This Policy:",
         points: [
           "Policy may be updated periodically to reflect changes in practices, services, or applicable regulations to ensure continued transparency about how we handle your information.",
-          "Significant changes will be communicated via our website, email notifications, or app alerts, giving you ample time to review modifications before they take effect."
         ],
         bulletStyle: 'bullet'
       },
-      {
-        heading: "Gapstays Hotels reserve the right to deny check-in in the following circumstances:",
-        points: [
-          "If guests fail to provide a valid government-issued photo ID with clearly visible information that matches the booking details. Expired, damaged, or photocopied IDs may not be accepted at the discretion of the property management.",
-          "If minor guests are unaccompanied by a guardian or parent. Minors (under 18 years) must be accompanied by an adult with proper documentation establishing their relationship or guardianship status.",
-          "If the hotel deems the guest's check-in suspicious or inappropriate, including cases of visible intoxication, threatening behavior toward staff, attempts to circumvent security protocols, or presenting false information during registration."
-        ],
-        bulletStyle: 'number'
-      },
-      {
-        heading: "Post-Denial Procedures",
-        points: [
-          "In such cases, Gapstays Hotel will not be liable to provide a refund as these requirements are clearly communicated during the booking process and constitute a breach of the reservation agreement.",
-          "Guests denied check-in may contact Gapstays customer support for assistance in finding alternative accommodation, though any price difference or additional costs will be the guest's responsibility."
-        ],
-        bulletStyle: 'bullet'
-      }
     ]
   },
   {
@@ -127,7 +106,7 @@ const policySections: PolicySection[] = [
         points: [
           "You may cancel your booking via the Gapstays website or mobile app by accessing your reservation details and selecting the cancellation option. Our system will immediately process your request and provide a cancellation reference number for your records."
         ],
-        bulletStyle: 'number'
+        bulletStyle: 'bullet'
       },
       {
         heading: "Refunds:",
@@ -151,6 +130,23 @@ const policySections: PolicySection[] = [
         points: [
           "Booking modifications such as date changes or room upgrades are subject to availability and may result in rate adjustments based on current pricing.",
           "Shortening your stay after the modification deadline may be treated as a partial cancellation and subject to the property's cancellation penalties."
+        ],
+        bulletStyle: 'bullet'
+      },
+      {
+        heading: "Gapstays Hotels reserve the right to deny check-in in the following circumstances:",
+        points: [
+          "If guests fail to provide a valid government-issued photo ID with clearly visible information that matches the booking details. Expired, damaged, or photocopied IDs may not be accepted at the discretion of the property management.",
+          "If minor guests are unaccompanied by a guardian or parent. Minors (under 18 years) must be accompanied by an adult with proper documentation establishing their relationship or guardianship status.",
+          "If the hotel deems the guest's check-in suspicious or inappropriate, including cases of visible intoxication, threatening behavior toward staff, attempts to circumvent security protocols, or presenting false information during registration."
+        ],
+        bulletStyle: 'number'
+      },
+      {
+        heading: "Post-Denial Procedures",
+        points: [
+          "In such cases, Gapstays Hotel will not be liable to provide a refund as these requirements are clearly communicated during the booking process and constitute a breach of the reservation agreement.",
+          "Guests denied check-in may contact Gapstays customer support for assistance in finding alternative accommodation, though any price difference or additional costs will be the guest's responsibility."
         ],
         bulletStyle: 'bullet'
       }
