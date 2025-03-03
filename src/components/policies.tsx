@@ -159,8 +159,7 @@ const policySections: PolicySection[] = [
         heading: "Check-in & Age Requirement:",
         points: [
           "Primary guests must be 18+ with a valid government-issued photo ID (Aadhar, Driving License, Voter ID, Passport). All original documents must be presented at check-in for verification.",
-          "PAN cards are not accepted as valid ID proof as they do not contain address information required for guest registration under local regulations.",
-          "Standard check-in time is 12:00 PM across most Gapstays properties, though this may vary by location and will be clearly indicated in your booking confirmation."
+          "PAN cards are not accepted as valid ID proof as they do not contain address information required for guest registration under local regulations."
         ],
         bulletStyle: 'bullet'
       },
@@ -176,7 +175,7 @@ const policySections: PolicySection[] = [
         heading: "Visitors & Occupancy:",
         points: [
           "Visitors are allowed between 10 AM – 8 PM; no overnight stays permitted for unregistered guests. All visitors must present ID at reception and register their details for security purposes.",
-          "Triple occupancy may be allowed with an extra mattress (additional fees apply, typically 25-30% of the room rate) subject to room size and fire safety regulations. Quad occupancy is not permitted in standard rooms."
+          "Triple occupancy may be allowed with an extra mattress (additional fees apply, typically 25-30% of the room rate) subject to room size. Quad occupancy is not permitted in standard rooms."
         ],
         bulletStyle: 'bullet'
       },
@@ -184,7 +183,7 @@ const policySections: PolicySection[] = [
         heading: "Child Policy:",
         points: [
           "Children under 5 years stay free when using existing bedding (no extra bed provided). A maximum of one child per room is allowed without additional charges.",
-          "Breakfast charges may apply for children based on the hotel's meal pricing policy, typically at 50% of adult rates for children aged 5-12. Children under 5 may eat free from the kids' menu in select properties."
+          "Breakfast charges may apply for children based on the hotel's meal pricing policy, typically at 50% of adult rates for children aged 5-12."
         ],
         bulletStyle: 'bullet'
       },
@@ -201,14 +200,13 @@ const policySections: PolicySection[] = [
         heading: "Booking & Payment:",
         points: [
           "Stay extensions are subject to availability and current room rates, which may differ from your original booking rate due to seasonal pricing or occupancy fluctuations.",
-          "Payments accepted only via Gapstays' secure payment platforms including credit/debit cards, net banking, UPI, and Gapstays Wallet. Cash payments are not accepted at most properties for security reasons."
+          "Payments accepted only via Gapstays' secure payment platforms including credit/debit cards, net banking, UPI, and Gapstays Wallet."
         ],
         bulletStyle: 'bullet'
       },
       {
         heading: "Support & Contact:",
         points: [
-          "Report any issues immediately via Gapstays Support channels available 24/7 through the app, website chat, or dedicated support hotline to ensure prompt resolution during your stay.",
           "Complaints raised after check-out will not be entertained for compensation purposes. All concerns must be reported while on property to allow management the opportunity to address them immediately."
         ],
         bulletStyle: 'bullet'
@@ -218,18 +216,9 @@ const policySections: PolicySection[] = [
         points: [
           "Gapstays Hotel may have restrictions on bookings from unmarried couples or those with local ID proofs based on specific regional regulations and individual property policies designed to comply with local ordinances.",
           "Such policies will be clearly communicated during the booking process with property-specific tags indicating 'Couple-Friendly' or 'Local IDs Accepted' to help you make an informed decision before reservation.",
-          "Note: If a booking is denied by the hotel due to these policies despite being displayed as acceptable during booking, Gapstays will assist in finding alternative accommodation, but no refund will be issued if guests misrepresent their status during reservation."
         ],
         bulletStyle: 'bullet'
       },
-      {
-        heading: "Local ID Considerations",
-        points: [
-          "Properties in certain locations may have restrictions on accepting guests with identification from the same city or district due to local regulations aimed at maintaining neighborhood characteristics.",
-          "When booking with local ID, please verify the property's policy by checking the 'Local ID Accepted' tag or contacting customer support before finalizing your reservation to avoid check-in complications."
-        ],
-        bulletStyle: 'bullet'
-      }
     ]
   },
 ];
