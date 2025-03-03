@@ -104,14 +104,14 @@ const policySections: PolicySection[] = [
       {
         heading: "Booking Cancellation:",
         points: [
-          "You may cancel your booking via the Gapstays website or mobile app by accessing your reservation details and selecting the cancellation option. Our system will immediately process your request and provide a cancellation reference number for your records."
+          "You may cancel your booking by calling us using the contact information provided in the footer. Our team will assist you with the cancellation process and provide a reference number for your records."
         ],
         bulletStyle: 'bullet'
       },
       {
         heading: "Refunds:",
         points: [
-          "Any applicable refund will be processed within 7-14 working days depending on your payment method and financial institution's processing timeframes. Credit card refunds typically appear faster than bank transfers or digital wallets.",
+          "Any applicable refund will be processed within 5-7 working days depending on your payment method and financial institution's processing timeframes.",
           "If the cancellation amount exceeds the payment made, the difference may be debited from your Gapstays Wallet balance. In case your wallet has insufficient funds, you will be prompted to make an additional payment to cover the outstanding amount."
         ],
         bulletStyle: 'bullet'
@@ -119,8 +119,8 @@ const policySections: PolicySection[] = [
       {
         heading: "Cancellation Timeframes:",
         points: [
-          "Free cancellation available up to 48 hours before check-in for most standard bookings, subject to property-specific policies displayed during the booking process.",
-          "Cancellations within 48 hours of check-in may incur charges of up to 100% of the first night's stay, depending on the property's individual policy.",
+          "Free cancellation available up to 24 hours before check-in for most standard bookings, subject to property-specific policies displayed during the booking process.",
+          "Cancellations within 24 hours of check-in may incur charges of up to 100% of the first night's stay, depending on the property's individual policy.",
           "Special promotions, discounted rates, and peak season bookings may have stricter cancellation terms clearly indicated during the reservation process."
         ],
         bulletStyle: 'bullet'
