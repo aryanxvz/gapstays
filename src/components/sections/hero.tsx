@@ -13,7 +13,7 @@ export const Hero = () => {
 
   return (
     <section id="home" className="min-h-screen bg-neutral-900 flex items-center justify-center relative">
-      <LampContainer className="pt-20 px-4 sm:px-6">
+      <LampContainer className="pt-20 2xl:pt-8 px-4 sm:px-6">
         <motion.h1
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
