@@ -12,7 +12,7 @@ const navLinks = [
   { id: 'booking', label: 'Booking' },
   { id: 'reviews', label: 'Reviews' },
   { id: 'gallery', label: 'Gallery' },
-  { id: 'location', label: 'Location' },
+  { id: 'location', label: 'Location & FAQs' },
 ] as const;
 
 export const Navbar: FC = () => {
