@@ -1,7 +1,7 @@
 "use client"
 import { JSX, useState } from "react";
 import Image from "next/image";
-import { FaClock, FaWifi, FaConciergeBell, FaBroom, FaSoap, FaWind, FaMugHot, FaBed, FaTint, FaChevronLeft, FaChevronRight, FaMoneyBillWave, FaCalendarAlt } from "react-icons/fa";
+import { FaClock, FaWifi, FaConciergeBell, FaBroom, FaSoap, FaWind, FaMugHot, FaBed, FaTint, FaChevronLeft, FaChevronRight, FaMoneyBillWave, FaCalendarAlt, FaChevronDown, FaChevronUp } from "react-icons/fa";
 
 interface FeatureCard {
   title: string;
@@ -168,6 +168,11 @@ const RoomCarousel = () => {
 };
 
 export const Rooms = () => {
+  const [showAllFeatures, setShowAllFeatures] = useState(false);
+  
+  // On mobile, show first 4 features unless "read more" is clicked
+  const mobileFeatures = showAllFeatures ? features : features.slice(0, 4);
+
   return (
     <section id="rooms" className="bg-neutral-900 text-white">
       <div className="mx-auto max-w-6xl 2xl:max-w-7xl py-12 px-6 lg:py-28">
@@ -193,10 +198,37 @@ export const Rooms = () => {
           <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-center">Hotel Amenities</div>
           <div className="w-16 sm:w-20 h-1 bg-orange-500 mx-auto"></div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 rounded-lg mt-8 sm:mt-12 w-full">
+          {/* Desktop/Tablet View - Always show all features in grid */}
+          <div className="hidden sm:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 rounded-lg mt-8 sm:mt-12 w-full">
             {features.map((feature, index) => (
               <FeatureBox key={index} {...feature} />
             ))}
+          </div>
+
+          {/* Mobile View - Show limited features with read more */}
+          <div className="sm:hidden mt-8">
+            <div className="grid grid-cols-1 gap-3 rounded-lg w-full">
+              {mobileFeatures.map((feature, index) => (
+                <FeatureBox key={index} {...feature} />
+              ))}
+            </div>
+            
+            {/* Read More/Less Button */}
+            {features.length > 4 && (
+              <div className="flex justify-center pt-6">
+                <button
+                  onClick={() => setShowAllFeatures(!showAllFeatures)}
+                  className="flex items-center gap-2 text-white bg-orange-500 hover:bg-orange-600 px-6 py-3 rounded-lg transition-colors duration-200 font-medium"
+                >
+                  <span>{showAllFeatures ? "Show Less" : "View All Amenities"}</span>
+                  {showAllFeatures ? (
+                    <FaChevronUp className="text-sm" />
+                  ) : (
+                    <FaChevronDown className="text-sm" />
+                  )}
+                </button>
+              </div>
+            )}
           </div>
         </div>
       </div>

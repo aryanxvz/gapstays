@@ -1,3 +1,6 @@
+"use client"
+import { useState } from "react";
+import { ChevronDown, ChevronUp } from "lucide-react";
 import { TestimonialCard } from "../testimonial-card";
 import { TestimonialsHeader } from "../testimonial-header";
 
@@ -59,14 +62,45 @@ const testimonialsData = [
 ];
 
 export const Testimonials = () => {
+  const [showAllMobile, setShowAllMobile] = useState(false);
+  
+  // On mobile, show first 3 testimonials unless "read more" is clicked
+  const mobileTestimonials = showAllMobile ? testimonialsData : testimonialsData.slice(0, 3);
+
   return (
     <section id="reviews" className="bg-neutral-900">
       <div className="mx-auto max-w-6xl 2xl:max-w-7xl py-12 px-6 lg:py-20">
         <TestimonialsHeader />
-        <div className="mt-8 [column-fill:_balance] sm:columns-2 sm:gap-6 lg:columns-3 lg:gap-8">
+        
+        {/* Desktop/Tablet View - Always show all testimonials in columns */}
+        <div className="mt-8 hidden sm:block [column-fill:_balance] sm:columns-2 sm:gap-6 lg:columns-3 lg:gap-8">
           {testimonialsData.map((testimonial, index) => (
             <TestimonialCard key={index} {...testimonial} />
           ))}
+        </div>
+
+        {/* Mobile View - Show limited testimonials with read more */}
+        <div className="mt-8 sm:hidden space-y-4">
+          {mobileTestimonials.map((testimonial, index) => (
+            <TestimonialCard key={index} {...testimonial} />
+          ))}
+          
+          {/* Read More/Less Button */}
+          {testimonialsData.length > 3 && (
+            <div className="flex justify-center pt-4">
+              <button
+                onClick={() => setShowAllMobile(!showAllMobile)}
+                className="flex items-center gap-2 text-white bg-neutral-800 hover:bg-neutral-700 px-4 py-2 rounded-lg transition-colors duration-200"
+              >
+                <span>{showAllMobile ? "Show Less" : "Read More"}</span>
+                {showAllMobile ? (
+                  <ChevronUp className="w-4 h-4" />
+                ) : (
+                  <ChevronDown className="w-4 h-4" />
+                )}
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </section>
