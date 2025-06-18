@@ -1,9 +1,12 @@
 "use client"
-import React from 'react';
+import React, { useEffect } from 'react';
+import Link from 'next/link';
+import { ArrowLeft } from 'lucide-react';
 
 interface PolicySection {
   title: string;
   items: PolicyItem[];
+  id: string; // Added id property
 }
 
 interface PolicyItem {
@@ -16,6 +19,7 @@ interface PolicyItem {
 const policySections: PolicySection[] = [
   {
     title: "Privacy Policy",
+    id: "privacy-policy", // Added ID
     items: [
       {
         heading: "Information We Collect:",
@@ -100,6 +104,7 @@ const policySections: PolicySection[] = [
   },
   {
     title: "Cancellation Policy",
+    id: "cancellation-policy", // Added ID
     items: [
       {
         heading: "Booking Cancellation:",
@@ -154,6 +159,7 @@ const policySections: PolicySection[] = [
   },
   {
     title: "Guest Policy",
+    id: "guest-policy", // Added ID
     items: [
       {
         heading: "Check-in & Age Requirement:",
@@ -254,7 +260,8 @@ const PolicySection = ({ section, index }: { section: PolicySection; index: numb
   
   return (
     <section 
-      className={`py-16 sm:py-20 w-full ${isDarkBg ? 'bg-neutral-900' : 'bg-gray-50'}`}
+      id={section.id} // Added ID for auto-scrolling
+      className={`py-16 sm:py-20 w-full scroll-mt-20 ${isDarkBg ? 'bg-neutral-900' : 'bg-gray-50'}`}
     >
       <div className="max-w-6xl 2xl:max-w-7xl mx-auto px-6">
         <div className="mb-8 sm:mb-12 text-center">
@@ -273,8 +280,26 @@ const PolicySection = ({ section, index }: { section: PolicySection; index: numb
 };
 
 export const Policies = () => {
+  // Enable smooth scrolling for the entire document
+  useEffect(() => {
+    document.documentElement.style.scrollBehavior = 'smooth';
+    
+    // Cleanup function to reset scroll behavior when component unmounts
+    return () => {
+      document.documentElement.style.scrollBehavior = 'auto';
+    };
+  }, []);
+
   return (
-    <div className="w-full">
+    <div className="w-full relative" style={{ scrollBehavior: 'smooth' }}>
+      {/* Floating Back Button */}
+      <Link 
+        href="/" 
+        className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 bg-orange-500 hover:bg-orange-600 text-white p-3 sm:p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105"
+        aria-label="Back to Home"
+      >
+        <ArrowLeft className="w-5 h-5 sm:w-6 sm:h-6" />
+      </Link>
       <section className="bg-neutral-900 pt-16 sm:pt-20 pb-10 scroll-mt-16">
         <div className="max-w-6xl 2xl:max-w-7xl mx-auto px-6">
           <div className="mb-8 sm:mb-12 text-center">

@@ -20,17 +20,17 @@ export const Footer = () => {
             <h3 className="text-white text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/policy" className="hover:text-orange-500 transition-colors">
+                <Link href="/policy#guest-policy" className="hover:text-orange-500 transition-colors">
                   Guest Policy
                 </Link>
               </li>
               <li>
-                <Link href="/policy" className="hover:text-orange-500 transition-colors">
+                <Link href="/policy#privacy-policy" className="hover:text-orange-500 transition-colors">
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link href="/policy" className="hover:text-orange-500 transition-colors">
+                <Link href="/policy#cancellation-policy" className="hover:text-orange-500 transition-colors">
                   Cancellation and Refund Policy
                 </Link>
               </li>
