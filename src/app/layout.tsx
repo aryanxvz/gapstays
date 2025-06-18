@@ -9,18 +9,12 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "GAPSTAYS",
-  description: "Comfort living in the heart of Pune",
-  icons: {
-    icon: "/favicon.ico",
-  },
+  description: "Comfort living in the heart of the Pune",
 };
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" href="/favicon.ico" />
-      </head>
       <body className={`${inter.className} relative min-h-screen overflow-x-hidden bg-neutral-900`}>
         {children}
       </body>
