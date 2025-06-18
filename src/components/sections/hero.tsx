@@ -13,7 +13,7 @@ export const Hero = () => {
 
   return (
     <section id="home" className="min-h-screen bg-neutral-900 flex items-center justify-center relative">
-      <LampContainer className="pt-20 2xl:pt-8 px-4 sm:px-6">
+      <LampContainer className="pt-52 2xl:pt-8 px-4 sm:px-6">
         <motion.h1
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -46,7 +46,7 @@ export const Hero = () => {
               ease: [0.22, 1, 0.36, 1],
             }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl text-gray-200 font-bold">
+            className="text-2xl md:text-4xl text-gray-200 font-bold">
             Experience Comfort Without Compromise
           </motion.div>
           
@@ -59,7 +59,7 @@ export const Hero = () => {
               ease: [0.22, 1, 0.36, 1],
             }}
             viewport={{ once: true }}
-            className="text-gray-300 text-lg sm:text-xl md:text-2xl font-normal px-4">
+            className="text-gray-300 text-xl md:text-2xl font-normal px-4">
             Your perfect stay awaits in the heart of the city
           </motion.div>
         </motion.div>
@@ -88,7 +88,7 @@ export const Hero = () => {
       </LampContainer>
       
       <motion.div 
-        className="absolute bottom-16 lg:bottom-4 left-1/2 transform -translate-x-1/2 text-white cursor-pointer z-10"
+        className="absolute bottom-8 lg:bottom-4 left-1/2 transform -translate-x-1/2 text-white cursor-pointer z-10"
         onClick={() => scrollToSection('about')}
         animate={{ 
           y: [0, -10, 0]
