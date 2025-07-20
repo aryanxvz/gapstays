@@ -135,7 +135,7 @@ export const Location = () => {
           <div className="h-[400px] rounded-lg overflow-hidden shadow-lg">
             <iframe
               className="w-full h-full"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.2655905406377!2d73.92310515530019!3d18.56079009287348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c1c0dadacecd%3A0x5b5db1739841a6a2!2sGapstays!5e0!3m2!1sen!2sin!4v1739802508897!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d236.39312075199987!2d73.92292947237821!3d18.56096309281227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c17db0fb16d3%3A0x78f10a8063f5d042!2sGapstays!5e0!3m2!1sen!2sin!4v1753012870654!5m2!1sen!2sin"
               style={{ border: 0 }}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
