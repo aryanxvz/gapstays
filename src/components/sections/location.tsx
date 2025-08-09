@@ -90,9 +90,9 @@ export const Location = () => {
               <div className="flex items-center md:items-start gap-2">
                 <MapPin className="text-orange-500 mt-1 flex-shrink-0 mr-1" />
                 <div className="text-center md:text-start">
-                  <p className="text-gray-400">S.N. 45/A/5/2, Fifth Mail Bus Stop, Nagar Road</p>
-                  <p className="text-gray-400">Opp. Pachwa Mail Brt, Near E-Space IT Park</p>
-                  <p className="text-gray-400">Somnath Nagar, Wadgaon Sheri, Pune, Maharashtra 411014</p>
+                  <p className="text-gray-400">Fifth Mail, Bus Stop, SN.45/a/5/2, Nagar Rd,</p>
+                  <p className="text-gray-400">opp. BRT, near E-Space IT Park, Somnath Nagar</p>
+                  <p className="text-gray-400">Wadgaon Sheri, Pune, Maharashtra 411014</p>
                 </div>
               </div>
 

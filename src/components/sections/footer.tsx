@@ -43,8 +43,7 @@ export const Footer = () => {
               <div className="flex md:flex-row items-center md:items-start space-y-2 md:space-y-0 md:space-x-3">
                 <MapPin className="w-5 h-5 mt-1 flex-shrink-0" />
                 <p className="text-center md:text-left">
-                  Gapstays, S.N. 45/A/5/2, Fifth Mail Bus Stop, Nagar Road, Opp. Pachwa Mail Brt, Near E-Space IT Park, 
-                  Somnath Nagar, Wadgaon Sheri, Pune, Maharashtra 411014
+                  Fifth Mail, Bus Stop, SN.45/a/5/2, Nagar Rd, opp. BRT, near E-Space IT Park, Somnath Nagar, Wadgaon Sheri, Pune, Maharashtra 411014
                 </p>
               </div>
               <div className="flex md:flex-row items-center space-y-2 md:space-y-0 md:space-x-3">
